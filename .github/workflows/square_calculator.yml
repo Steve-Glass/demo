@@ -40,18 +40,15 @@ jobs:
         name: test-results
         path: results.xml
 
-  attest-artifact:
+  attest-app:
     needs: build-and-test
     runs-on: ubuntu-latest
 
     steps:
-    - name: Download artifact
-      uses: actions/download-artifact@4.1.8
-      with:
-        name: test-results
-        path: ./artifact
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Generate artifact attestation
-      uses: actions/attest-build-provenance@v1
-      with:
-        subject-path: './artifact'
+      - name: Generate artifact attestation
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: './square_calculator.py'
