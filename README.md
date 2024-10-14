@@ -23,7 +23,7 @@ your-repo/
 
 - **square_calculator.py**: Contains the main application logic.
 - **test_square_calculator.py**: Contains the test suite for the application.
-- **.github/workflows/python-app.yml**: Contains the GitHub Actions workflow for CI/CD.
+- **.github/workflows/python-app.yml**: Contains the GitHub Actions workflow.
 
 ## Setup
 
